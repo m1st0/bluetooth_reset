@@ -1,0 +1,11 @@
+[Unit]
+Description=Reset Bluetooth Module on Boot
+After=bluetooth.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/bluetooth_reset.zsh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
